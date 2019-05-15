@@ -1,20 +1,16 @@
-import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import {
+    createStackNavigator,
+    createAppContainer,
+} from 'react-navigation'
+import Main from './Main';
 
-class componentName extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    };
-  }
 
-  render() {
-    return (
-      <View>
-        <Text> textInComponent </Text>
-      </View>
-    );
-  }
-}
+const App = createStackNavigator({
+    Main: Main
+},
+    {
+        headerMode: 'none'
+    }
+)
 
-export default componentName;
+export default createAppContainer(App);;
