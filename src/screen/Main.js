@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
+import Header from '../component/Header';
+import RootView from '../component/RootView';
 
 class Main extends Component {
     constructor(props) {
@@ -10,9 +12,9 @@ class Main extends Component {
 
     render() {
         return (
-            <View>
+            <RootView>
                 <Text> textInComponent </Text>
-            </View>
+            </RootView>
         );
     }
 }
