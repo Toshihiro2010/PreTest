@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import {
     StatusBar,
     Platform,
-    View
+    View,
+    Text
 } from 'react-native';
 import PropTypes from 'prop-types';
+import { Icon } from 'react-native-elements';
 
 class Header extends Component {
     constructor(props) {
@@ -15,15 +17,52 @@ class Header extends Component {
     }
 
     render() {
-        let { visibleLeft, leftIconType, leftIconName
-            , iconColor, visibleRight, rightIconType, rightIconName,
-            hideStatusBar, titleStyle, headerStyle,
-            autoFontSize
+        let {
+            title,
         } = this.props
 
 
         return (
-            <View>
+            <View
+                style={{
+                    flexDirection: 'row',
+                    paddingTop: 16,
+                    paddingBottom: 16,
+                    paddingLeft: 8,
+                    paddingRight: 8,
+                    borderBottomWidth: 1,
+                    borderColor: '#000000',
+                    backgroundColor: '#FFFFFF',
+                    alignItems: 'center'
+                }}
+            >
+                <Icon
+                    name='left'
+                    type='antdesign'
+                    underlayColor='transparent'
+                    onPress={() => {
+                        this.leftClick()
+                    }}
+                />
+                <Text
+                    style={{
+                        flex: 1,
+                        textAlign: 'center',
+                        fontSize: 18,
+                        color:'#FF0000r'
+                    }}
+                >
+                    {title}
+                </Text>
+                <Icon
+                    name='left'
+                    type='antdesign'
+                    underlayColor='transparent'
+                    containerStyle={{
+                        opacity: 0
+                    }}
+                />
+
 
             </View>
         );
@@ -34,23 +73,12 @@ class Header extends Component {
 
         if (leftClick) {
             leftClick()
-
         } else {
-
             if (navigation) {
                 navigation.goBack(null)
             } else {
                 console.log("header left click")
             }
-        }
-    }
-
-    rightClick() {
-        let { rightClick } = this.props
-        if (rightClick) {
-            rightClick()
-        } else {
-            console.log("header right click")
         }
     }
 }
@@ -59,10 +87,13 @@ class Header extends Component {
 Header.propTypes = {
     title: PropTypes.string,
     navigation: PropTypes.any,
+    leftClick: PropTypes.func
 }
 
 Header.defaultProps = {
-    
+    title: 'Header',
+    navigation: null,
+    leftClick: null
 };
 
 
