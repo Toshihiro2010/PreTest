@@ -49,7 +49,7 @@ class Header extends Component {
                         flex: 1,
                         textAlign: 'center',
                         fontSize: 18,
-                        color:'#FF0000r'
+                        color: '#FF0000'
                     }}
                 >
                     {title}
