@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import {
     StatusBar,
-    Platform,
     View,
-    Text
+    Text,
 } from 'react-native';
 import PropTypes from 'prop-types';
 import { Icon } from 'react-native-elements';
@@ -18,6 +17,7 @@ class Header extends Component {
 
     render() {
         let {
+            visibleIcon,
             title,
         } = this.props
 
@@ -43,6 +43,9 @@ class Header extends Component {
                     onPress={() => {
                         this.leftClick()
                     }}
+                    containerStyle={{
+                        opacity: visibleIcon ? 1 : 0
+                    }}
                 />
                 <Text
                     style={{
@@ -61,6 +64,9 @@ class Header extends Component {
                     containerStyle={{
                         opacity: 0
                     }}
+                />
+                <StatusBar
+                    hidden={true}
                 />
 
 
@@ -87,13 +93,15 @@ class Header extends Component {
 Header.propTypes = {
     title: PropTypes.string,
     navigation: PropTypes.any,
-    leftClick: PropTypes.func
+    leftClick: PropTypes.func,
+    visibleIcon: PropTypes.bool
 }
 
 Header.defaultProps = {
     title: 'Header',
     navigation: null,
-    leftClick: null
+    leftClick: null,
+    visibleIcon: true
 };
 
 

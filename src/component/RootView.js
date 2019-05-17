@@ -9,7 +9,7 @@ export class RootView extends Component {
 
     render() {
 
-        let { title, navigation } = this.props
+        let { title, navigation, visibleIcon } = this.props
         return (
             <View
                 style={{
@@ -19,9 +19,7 @@ export class RootView extends Component {
                 <Header
                     title={title}
                     navigation={navigation}
-                />
-                <StatusBar
-                    hidden={true}
+                    visibleIcon={visibleIcon}
                 />
                 <Body>
                     {this.props.children}
@@ -39,7 +37,7 @@ RootView.propTypes = {
 
 RootView.defaultProps = {
     title: 'Header',
-    navigation: PropTypes.any
+    navigation: null
 };
 
 

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import Header from '../component/Header';
 import RootView from '../component/RootView';
+import MyButton from '../component/MyButton';
 
 class Main extends Component {
     constructor(props) {
@@ -11,9 +12,18 @@ class Main extends Component {
     }
 
     render() {
+        let { navigation } = this.props
         return (
-            <RootView>
-                <Text> textInComponent </Text>
+            <RootView
+                title={'PreTest'}
+                visibleIcon={false}
+            >
+                <MyButton
+                    title='Test Page'
+                    onPress={() => {
+                        navigation.navigate('Test')
+                    }}
+                />
             </RootView>
         );
     }

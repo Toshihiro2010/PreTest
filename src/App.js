@@ -12,7 +12,7 @@ const App = createStackNavigator({
 },
     {
         headerMode: 'none',
-        initialRouteName:'Test'
+        initialRouteName:'Main'
     }
 )
 
