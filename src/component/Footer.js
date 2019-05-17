@@ -19,7 +19,8 @@ class Footer extends Component {
     render() {
         let {
             title,
-            style, textStyle
+            style, textStyle,
+            children
         } = this.props
 
 
@@ -34,6 +35,7 @@ class Footer extends Component {
                     ...style
                 }}
             >
+                {children}
                 <Text
                     style={{
                         textAlign: 'center',
