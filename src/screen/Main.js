@@ -24,6 +24,16 @@ class Main extends Component {
                         navigation.navigate('Test')
                     }}
                 />
+
+                <MyButton
+                    title='Place Restaunt'
+                    onPress={() => {
+                        navigation.navigate('Test')
+                    }}
+                    style={{
+                        marginTop: 32,
+                    }}
+                />
             </RootView>
         );
     }
