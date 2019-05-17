@@ -57,7 +57,7 @@ Footer.propTypes = {
 }
 
 Footer.defaultProps = {
-    title: 'Coding Bry Patipan Ongarj',
+    title: 'Coding By Patipan Ongarj',
     style: {},
     textStyle: {}
 };

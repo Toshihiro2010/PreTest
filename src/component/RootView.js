@@ -3,6 +3,7 @@ import { Text, View, StatusBar } from 'react-native'
 import PropTypes from 'prop-types';
 import Header from './Header';
 import Footer from './Footer';
+import Body from './Body';
 
 export class RootView extends Component {
 
@@ -22,15 +23,11 @@ export class RootView extends Component {
                 <StatusBar
                     hidden={true}
                 />
-                <View
-                    style={{
-                        flex: 1
-                    }}
-                >
+                <Body>
                     {this.props.children}
-                </View>
-                <Footer/>
-            </View>
+                </Body>
+                <Footer />
+            </View >
         )
     }
 }
