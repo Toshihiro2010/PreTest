@@ -32,7 +32,7 @@ class Header extends Component {
                     paddingRight: 8,
                     borderBottomWidth: 1,
                     borderColor: '#000000',
-                    backgroundColor: '#FFFFFF',
+                    backgroundColor: '#d1d2d4',
                     alignItems: 'center'
                 }}
             >
