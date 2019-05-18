@@ -16,7 +16,6 @@ export const getDataNextPageToken = (token) => {
 
 export const getImageGoogle = (googleImage) => {
     let key = '&key=' + apiKey
-    // let image = '&photoreference=CmRaAAAALOaa6IowfyTD_bqrRzv6zM58pgj8Trk-7lvRlcc9p-vnZuRLhBXbavBMlN87toEA2b8GJmDbKNUJnU1S9AQBgkmhba5RgL34DihTZEDGiSs9jWdmuyGc-KzCZYKNlhwNEhBRRbWkBB1HHs95ejwCCe8RGhR3X_DtixqcEbBu1fb0u3RU_VDlwA'
     let image = '&photoreference=' + googleImage
     let path = 'https://maps.googleapis.com/maps/api/place/photo?maxwidth=600' + image + key
     return path
