@@ -3,35 +3,27 @@ import { Text, View, StatusBar } from 'react-native'
 import PropTypes from 'prop-types';
 import Header from './Header';
 import Footer from './Footer';
+import Body from './Body';
+import Container from './Container';
 
 export class RootView extends Component {
 
     render() {
 
-        let { title, navigation } = this.props
+        let { title, navigation, visibleIcon } = this.props
         return (
-            <View
-                style={{
-                    flex: 1
-                }}
-            >
+            <Container>
                 <Header
                     title={title}
                     navigation={navigation}
+                    visibleIcon={visibleIcon}
                 />
-                <StatusBar
-                    hidden={true}
-                />
-                <View
-                    style={{
-                        flex: 1
-                    }}
-                >
+                <Body>
                     {this.props.children}
-                </View>
-                <Footer/>
-            </View>
-        )
+                </Body>
+                <Footer />
+            </Container>
+         )
     }
 }
 
@@ -42,7 +34,7 @@ RootView.propTypes = {
 
 RootView.defaultProps = {
     title: 'Header',
-    navigation: PropTypes.any
+    navigation: null
 };
 
 
