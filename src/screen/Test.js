@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
-import RootView from '../component/RootView';
 import MyButton from '../component/MyButton';
 import Header from '../component/Header';
 import Body from '../component/Body';
 import Footer from '../component/Footer';
 import Container from '../component/Container';
-import { ScrollView } from 'react-native-gesture-handler';
 
 class Test extends Component {
 

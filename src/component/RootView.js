@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Header from './Header';
 import Footer from './Footer';
 import Body from './Body';
+import Container from './Container';
 
 export class RootView extends Component {
 
@@ -11,11 +12,7 @@ export class RootView extends Component {
 
         let { title, navigation, visibleIcon } = this.props
         return (
-            <View
-                style={{
-                    flex: 1
-                }}
-            >
+            <Container>
                 <Header
                     title={title}
                     navigation={navigation}
@@ -25,8 +22,8 @@ export class RootView extends Component {
                     {this.props.children}
                 </Body>
                 <Footer />
-            </View >
-        )
+            </Container>
+         )
     }
 }
 
