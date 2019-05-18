@@ -26,9 +26,9 @@ class Main extends Component {
                 />
 
                 <MyButton
-                    title='Place Restaunt'
+                    title='Place Restaurant'
                     onPress={() => {
-                        navigation.navigate('Test')
+                        navigation.navigate('Restaurant')
                     }}
                     style={{
                         marginTop: 32,
